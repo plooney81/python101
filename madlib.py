@@ -23,7 +23,9 @@ user_input_answer2 = input('> ')
 print('\nPlease enter a adjective for the (adjective1) slot.')
 user_input_answer3 = input('> ')
 
+# we need to change our madlib story
 madlib_story = f"""One day {user_input_answer1} was walking through the forest. They decided to go to {user_input_answer2}. 
 Upon arriving to {user_input_answer2} they looked around and shouted 'wow this place is {user_input_answer3}'."""
 
+# and then we finally print our new madlib story
 print('\n\nHere is your new story:\n\n' + madlib_story)
