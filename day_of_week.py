@@ -2,7 +2,7 @@
 day_of_the_week = ''
 
 # prompt the user for the day of the week
-print('Please enter a of the week between 0 and 6...0 being for Sunday and 6 being for Saturday')
+print('Please enter a day of the week between 0 and 6...0 being for Sunday and 6 being for Saturday')
 
 # a while loop that continues to ask the user for an input until a value between 0 and 6 is inputted
 while day_of_the_week == '':
