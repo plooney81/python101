@@ -7,6 +7,8 @@
 
 # prompt the user first for the bill amount
 print('Input your bill amount')
+
+# while loop for input validation, only way it will stop looping is if user inputs valid number
 while True:
     try:
         bill_amount = float(input('> '))
@@ -19,6 +21,8 @@ print('Input the level of service based on the following values')
 print('1 --> good (20% tip)')
 print('2 --> fair (15% tip)')
 print('3 --> bad (10% tip)')
+
+# another while loop for input validation, only way it will stop looping is if user inputs valid number
 while True:
     try:
         service_level = int(input('> '))
