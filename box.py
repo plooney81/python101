@@ -4,7 +4,6 @@ def is_it_a_integer():
     while True:
         try:
             return int(input('> '))
-            break
         except ValueError:
             print('\nInvalid input, please try again')
 
