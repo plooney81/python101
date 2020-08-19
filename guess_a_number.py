@@ -70,19 +70,15 @@ def guessing_game():
         # input variable and then the while loop starts over again
         elif user_input < magic_number:
             print(f'\n{user_input} is too low, you have {numb_guesses - (counter + 1)} guesses left')
-            if numb_guesses - (counter + 1) != 0:
-                print('\nTry again')
+
         
         # if the guess isn't the magic number, and is too high, then the user is told so, and is prompted to guess again
         # by calling the is_it_a_integer function again, the return of that function is then saved back into the user
         # input variable and then the while loop starts over again
         elif user_input > magic_number:
             print(f'\n{user_input} is too high, you have {numb_guesses - (counter + 1)} guesses left')
-            if numb_guesses - (counter + 1) != 0:
-                print('\nTry again')
         
-
-
+    
         #we need to iterate the counter variable
         counter += 1
 
@@ -90,6 +86,7 @@ def guessing_game():
         if counter == (numb_guesses):
             print('You ran out of guesses')
         else:
+            print('\nTry again')
             # capture the new user input
             user_input = is_it_a_integer()
 
