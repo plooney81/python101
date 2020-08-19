@@ -15,7 +15,7 @@ while True:
         print('\nInvalid input, please type an Integer')
 
 # find out how wide our bottom row will be, so we can center the other rows in the following while loop
-bottom_width = int(1 + (2 * (triangle_height-1)))
+bottom_width = int((2 * triangle_height)- 1)
 
 
 # initiate our number of emoji's per level with 1
@@ -26,8 +26,8 @@ side_spaces = bottom_width - 1
 
 # while loop to print our triangle
 while counter < triangle_height:
-    # print out the lines worth of space and emoji's
-    print(' ' * side_spaces + ('💩' * numb) + ' ' * side_spaces)
+    # print out the lines worth of left spaces (so we can center the line to our bottom line) and the number of emoji's
+    print(' ' * side_spaces + '💩' * numb)
     numb += 2
     counter += 1
     side_spaces -= 2
