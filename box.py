@@ -25,8 +25,7 @@ print('*' * user_width)
 i = 0
 while i < (user_height - 2):
     print('*' + ' ' * (user_width - 2) + '*')
-    i = i + 1
-
+    i += 1
 
 # then create the bottom of the box
 print('*' * user_width)
