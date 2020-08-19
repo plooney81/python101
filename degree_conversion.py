@@ -1,22 +1,20 @@
-# Initiate our change_to_fahrenheit variable to -9999
-change_to_fahrenheit = 0
-
 # Prompt the user to enter a degrees in Celsius
 print('Enter degrees in Celsius and see what happens:')
 
-# While loop that continues to ask for user input if it doesn't
-while change_to_fahrenheit == 0:
+# While loop that continues to ask for user input if the user inputs anything other than a number.
+while True:
 
-    # capture the user input to a variable
-    user_input = input('> ')
-
-    # if the user correctly inputs a number
-    if user_input.isnumeric():
+    # try to run the following block, if there is a type error (i.e. the user entered a string), then the except clause will execute.
+    try:
+        # assigns the input to a variable named user input
+        user_input = float(input('> '))
         # take user input and convert to fahreheneit 
-        user_input = float(user_input)
         change_to_fahrenheit = ((user_input * (9/5)) + 32)
-    else:
+        # need to break out of our while loop if the user inputted a number and 
+        # we did not get a ValueError
+        break
+    except ValueError:
         print('Invalid input try again')
 
 # print the new degrees
-print(f'Your degrees in fahrenheit are: {change_to_fahrenheit}')
+print(f'You inputted {user_input} degrees Celsius, which is {change_to_fahrenheit} degrees Fahrenheit')
