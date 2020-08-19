@@ -28,4 +28,5 @@ while True:
         print('Bye')
         break
     else:
+        # if the input isn't yes or no, they it will loop and continue to ask for an input until a valid input is given
         print('\nInvalid input, please input either yes or no')
