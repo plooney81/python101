@@ -6,7 +6,7 @@
 #       bad = 10% tip
 
 # prompt the user first for the bill amount
-print('Input your bill amount')
+print('\nInput your bill amount')
 
 # while loop for input validation, only way it will stop looping is if user inputs valid number
 while True:
@@ -17,7 +17,7 @@ while True:
         print('Invalid input. Please enter a valid number')
 
 # prompt the user for the service level
-print('Input the level of service based on the following values')
+print('\nInput the level of service based on the following values')
 print('1 --> good (20% tip)')
 print('2 --> fair (15% tip)')
 print('3 --> bad (10% tip)')
@@ -41,4 +41,5 @@ else:
     print('This should\'nt be happening')
 
 #finally we print the new total with the tip included
-print(f'The new total with tip included is ${total_bill}')
+print('-' * 70)
+print(f'\n\nThe new total with tip included is ${total_bill}')
