@@ -24,9 +24,6 @@ while True:
         user_input = user_input
         break
 
-# we need to initiate a counter variable
-counter = 0
-
 # we need to initiate a dummy variable for saving the new leetspeak paragraph
 leetspeak = ''
 
@@ -54,13 +51,10 @@ for character in user_input:
     # if the character is not one of these special characters, then we don't need to change that particular character,
     # so we assign append_character to the original value.
     else:
-        append_character = user_input[counter]
+        append_character = character
     
     # we then append the correct character to our leetspeak variable
     leetspeak += append_character
-
-    # then we increment our counter variable
-    counter += 1
 
 # we then print out the final translation
 print(leetspeak)
