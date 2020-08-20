@@ -27,7 +27,7 @@ side_spaces = bottom_width - 1
 # while loop to print our triangle
 while counter < triangle_height:
     # print out the lines worth of left spaces (so we can center the line to our bottom line) and the number of emoji's
-    print(' ' * side_spaces + '💩' * numb)
+    print(' ' * side_spaces + '🥴' * numb)
     numb += 2
     counter += 1
     side_spaces -= 2
