@@ -1,4 +1,4 @@
-# create a list of numbers, print the smallest number
+# create a list of numbers, print out all of the numbers that are positive
 
 import random
 
@@ -11,8 +11,8 @@ def is_it_an_integer():
             print('Invalid input, please enter an integer')
 
 # prompt the user to get our upper bounds for a random num
-# i.e. if the user inputs 5, then we could get a random number from 0 to 5
-print('\nInput a number you want for the upper bounds of a random int')
+# i.e. if the user inputs 5, then we could get a random number from -5 to 5
+print('\nInput a number you want for the upper and lower bounds of a random int')
 user_input = is_it_an_integer()
 
 # prompt the user to get how long they would like the list to be
@@ -26,23 +26,20 @@ list_of_numbers = []
 for index in range(0, list_length):
     # create a new random number
     # random.randint(a,b) returns a random integer that is between a and b
-    random_number = random.randint(0, user_input)
+    random_number = random.randint(-user_input, user_input)
 
     # append our random number
     list_of_numbers.append(random_number)
 
-# initiate a variable that keeps track of the lowest number so far
-# we initiate it to the bounds that the user gave + 1 becuase we know that whatever number that is in the list 
-# should be lower than that
-smallest_number = user_input + 1
+positive_numbers = []
 
-# now we loop through and find out which one of the numbers is smallest
+# now we loop through and find out which one of the number are positive
 for numbers in list_of_numbers:
     # if the current number in the list is higher than hgihest_numb, then we assign that number to highest number
-    if numbers < smallest_number:
-        smallest_number = numbers
+    if numbers >= 0:
+        positive_numbers.append(numbers)
 
 # print the variable highest_numb
 print(f'Our list is:')
 print(list_of_numbers)
-print(f'The lowest number in the list is: {smallest_number}')
+print(f'Here is a list of the positive numbers: {positive_numbers}')
