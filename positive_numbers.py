@@ -31,12 +31,13 @@ for index in range(0, list_length):
     # append our random number
     list_of_numbers.append(random_number)
 
+# create an empty array for our positive numbers
 positive_numbers = []
 
 # now we loop through and find out which one of the number are positive
 for numbers in list_of_numbers:
     # if the current number in the list is higher than hgihest_numb, then we assign that number to highest number
-    if numbers >= 0:
+    if numbers > 0:
         positive_numbers.append(numbers)
 
 # print the variable highest_numb
