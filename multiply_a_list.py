@@ -23,10 +23,10 @@ list_length = is_it_an_integer()
 print('\nInput a number you want to multiply the list by')
 multiplication_factor = is_it_an_integer()
 
-# create our empty list
+# initialize an empty list for ust to add our random numbers to
 list_of_numbers = []
 
-# for loop for our list
+# for loop for our list to add random numbers
 for index in range(0, list_length):
     # create a new random number
     # random.randint(a,b) returns a random integer that is between a and b
@@ -38,7 +38,8 @@ for index in range(0, list_length):
 # create an empty array for our multiplied numbers
 multiplied_numbers = []
 
-# now we loop through and find out which one of the number are positive
+# now we loop through the list of numbers list, and multiply the number at each index by 
+# the multiplication factor that the user specifed from above.
 for numbers in list_of_numbers:
     # multiply numbers by our multiplication factor and save to a new variable name mult
     mult = numbers * multiplication_factor
