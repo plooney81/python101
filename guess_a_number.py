@@ -49,6 +49,9 @@ def guessing_game():
 
     # only way to get out of the loop is to guess the right number
     while counter < (numb_guesses):
+
+        #we need to iterate the counter variable
+        counter += 1
         
         # if the user guesses right and wants to continue playing, then the while loop will break
         if user_input == magic_number:
@@ -69,18 +72,17 @@ def guessing_game():
         # by calling the is_it_a_integer function again, the return of that function is then saved back into the user
         # input variable and then the while loop starts over again
         elif user_input < magic_number:
-            print(f'\n{user_input} is too low, you have {numb_guesses - (counter + 1)} guesses left')
+            print(f'\n{user_input} is too low, you have {numb_guesses - (counter)} guesses left')
 
         
         # if the guess isn't the magic number, and is too high, then the user is told so, and is prompted to guess again
         # by calling the is_it_a_integer function again, the return of that function is then saved back into the user
         # input variable and then the while loop starts over again
         elif user_input > magic_number:
-            print(f'\n{user_input} is too high, you have {numb_guesses - (counter + 1)} guesses left')
+            print(f'\n{user_input} is too high, you have {numb_guesses - (counter)} guesses left')
         
     
-        #we need to iterate the counter variable
-        counter += 1
+
 
         # after we iterate the number variable, if it equals the number of guesses, then the while loop will terminate and the game will be over
         if counter == (numb_guesses):
