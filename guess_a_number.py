@@ -8,7 +8,10 @@ def guessing_game():
     def is_it_a_integer():
         while True:
             try:
+                #we do not need a break here because return automatically ends a function and
+                # returns the value of whatever is following the return keyword
                 return int(input('> '))
+                
             except ValueError:
                 print('\nInvalid input, please input a integer and try again')
 
@@ -92,8 +95,6 @@ def guessing_game():
             print('\nTry again')
             # capture the new user input
             user_input = is_it_a_integer()
-
-    
 
 # have to call the game function initially to start off the game or else nothing would happen
 guessing_game()
