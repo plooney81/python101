@@ -30,4 +30,6 @@ while counter < triangle_height:
     print(' ' * side_spaces + '🥴' * numb)
     numb += 2
     counter += 1
+    # we need two because the emoji actually takes up two spaces
+    # if we were using just the *, then side_spaces -= 1
     side_spaces -= 2
