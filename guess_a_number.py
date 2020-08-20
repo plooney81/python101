@@ -27,6 +27,7 @@ def guessing_game():
 
     # initiate a variable for the magic number
     # this is initiated with a random number between 1 and 10
+    # random.randint(a,b) returns a random integer that is between a and b
     magic_number = random.randint(1, 10)
 
     # as the user how many guesses they would like
