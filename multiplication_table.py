@@ -4,6 +4,7 @@
 print('\nPlease enter a number (integer) you would like to see the multiplication tables for')
 
 # while loop for our try except to make sure the user actually inputs an integer
+# if they don't enter an integer (i.e. we get a ValueError) than it will continue to ask them for another input
 while True:
     try:
         user_input = int(input('> '))
@@ -24,4 +25,5 @@ while outer_number <= user_input:
         print(f'{outer_number} X {inner_number} = {multiplication}')
         inner_number += 1
 
+    # incriment our outer_number variable
     outer_number += 1
