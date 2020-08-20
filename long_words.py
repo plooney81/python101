@@ -15,8 +15,8 @@ while True:
     except ValueError:
         break
 
-# convert it to lowercase for our if statement below
-user_input = user_input.lower()
+# convert it to lowercase for our if statement below (except for the first letter)
+user_input = user_input[0] + user_input[1:].lower()
 
 # counter variable
 counter = 0
