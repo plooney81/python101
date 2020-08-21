@@ -17,7 +17,7 @@ while counter <= user_input:
     # if the counter isn't 0 or 1, then we append the addition of the previous two numbers in the list
     else:
         fib_list.append(fib_list[counter - 1] + fib_list[counter - 2])
+    # print the counter (or the index) and then print the fib number corresponding to that index
+    print(f'{counter} => {fib_list[counter]}')
     # we then iterate the counter
     counter += 1
-
-print(fib_list)
