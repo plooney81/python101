@@ -164,6 +164,8 @@ comp_col_val = random.randint(0,2)
 # WE CAN TURN THIS INTO ANOTHER FUNCTION SO WE CAN THEN CALL IT FOR WHENEVER THE USER INPUTS ANOTHER MOVE
 for x in range(3):
     for y in range(3):
+        # boolean variable that is true if there aren't any moves in the index [x][y]
+        # will eventually have to put in more lines for if the computer has a move there as well.
         is_empty = (tic_grid[x][y] != f'__X__|') and (tic_grid[x][y] != f'__X__')
         if x == comp_row_val and y == comp_col_val:
             if is_empty:
