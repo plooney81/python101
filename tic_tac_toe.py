@@ -164,10 +164,13 @@ comp_col_val = random.randint(0,2)
 # WE CAN TURN THIS INTO ANOTHER FUNCTION SO WE CAN THEN CALL IT FOR WHENEVER THE USER INPUTS ANOTHER MOVE
 for x in range(3):
     for y in range(3):
-        # boolean variable that is true if there aren't any moves in the index [x][y]
-        # will eventually have to put in more lines for if the computer has a move there as well.
-        is_empty = (tic_grid[x][y] != f'__X__|') and (tic_grid[x][y] != f'__X__')
+        # we find the index in question
         if x == comp_row_val and y == comp_col_val:
+            # boolean variable that is true if there aren't any moves in the index [x][y]
+            # will eventually have to put in more lines for if the computer has a move there as well.
+            is_empty = (tic_grid[x][y] != f'__X__|') and (tic_grid[x][y] != f'__X__')
+            # if our boolean variable is true, then we know the index in question is empty and the move
+            # can be placed there, if not we will have to find another index
             if is_empty:
                 #place the computers move onto the grid with a O
                 print('the slot is empty')
