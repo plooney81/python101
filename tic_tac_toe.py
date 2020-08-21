@@ -154,14 +154,14 @@ print('\nHere is the grid with your move on it\n')
 print_grid()
 
 # generate a random number for the computers row index value, assign it to a variable named comp_row_val
-# comp_row_val = random.randint(0,2)
-comp_row_val = 0
+comp_row_val = random.randint(0,2)
+
 # generate a random number for the computers column index value, assign it to a variable named comp_col_val
-# comp_col_val = random.randint(0,2)
-comp_col_val = 0
+comp_col_val = random.randint(0,2)
 
 # we need to check if that value has already been placed, if so then we need to get new values for the comp_row_val 
 # and comp_col_val
+# WE CAN TURN THIS INTO ANOTHER FUNCTION SO WE CAN THEN CALL IT FOR WHENEVER THE USER INPUTS ANOTHER MOVE
 for x in range(3):
     for y in range(3):
         is_empty = (tic_grid[x][y] != f'__X__|') and (tic_grid[x][y] != f'__X__')
