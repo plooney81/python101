@@ -1,7 +1,14 @@
 # given an input from the user print out the fibinachi sequence up to that number
 
-print('Please input a number')
-user_input = int(input('> '))
+print('\nPlease input a number you would like to see the fibinachi sequence for')
+print('e.g.If we inputted 5, then the program would output the fibinachi sequence from 0 to 5')
+# checks to see if the user actually inputted an integer...if not, then it asks again
+while True:
+    try:
+        user_input = int(input('> '))
+        break
+    except ValueError:
+        print('\nInvalid input, please try again')
 
 # initiate an empty list to house our fibinachi numbers
 fib_list = []
