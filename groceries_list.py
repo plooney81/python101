@@ -58,14 +58,17 @@ def add_function():
         counter += 1
 
 def remove_function():
-
+    counter2 = 0
     # ask if the user want to remove an item
     while True:
         print_list2()
-        wants_to_remove = input("Do you want to remove an item?\n> ").lower()
+        if counter2 != 0:
+            wants_to_remove = input("Do you want to remove another item?\n> ").lower()
+        else:
+            wants_to_remove = 'yes'
         if wants_to_remove == 'yes' and len(list) > 0:
             # which item do you want to remove?
-            remove_item = input('What item do you want to remove? (use the index from above)')
+            remove_item = input('What item do you want to remove? (use the index from above)\n> ')
             while True:
                 try:
                     remove_item = int(remove_item)
@@ -82,5 +85,5 @@ def remove_function():
         elif len(list) == 0:
             print('There is nothing left in here')
             main_menu()
-
+        counter2 += 1
 main_menu()
