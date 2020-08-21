@@ -93,5 +93,5 @@ def remove_function():
             main_menu()
         counter2 += 1
 
-# call the main menu function in order to start the game
+# call the main menu function in order to start the list
 main_menu()
