@@ -226,3 +226,7 @@ tic_grid = check_move(comp_row_val, comp_col_val, tic_grid, "O")
 
 print('\nThe computer generated move is:')
 print_grid()
+
+# now we need a block that checks if anybody has won yet, will write here and then convert into a function so we can call it later on
+
+# possibly get another block that makes the cpmuter moves smart instead of just random, still tyring to think of the logic that could make this happen.
