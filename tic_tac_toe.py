@@ -53,7 +53,8 @@ def is_it_integer():
 # it has three parameters, row, col, and list_param
 # when we call the function we give it the row_val first
 # then the col_val
-# and finally our current tic_grid list
+# and finally our current tic_grid list, and the last parameter is the character to place on the board, 
+# O for computer and X for the user player.
 def place_move(row, col, list_param, char):
     # place an x at the index they inputted
     for x in range(3):
@@ -64,6 +65,39 @@ def place_move(row, col, list_param, char):
                 else:
                     list_param[x][y] = f'__{char}__'
     return list_param
+
+# we need to check if that value has already been placed, if so then we need to get new values for the comp_row_val 
+# and comp_col_val
+def check_move(row, col, list_param, char):
+    while True:
+        for x in range(3):
+            for y in range(3):
+                # we find the index in question
+                if x == row and y == col:
+                    # boolean variable that is true if there aren't any moves in the index [x][y]
+                    # will eventually have to put in more lines for if the computer has a move there as well.
+                    is_empty = (list_param[x][y] != f'__X__|') and (list_param[x][y] != f'__X__') and (list_param[x][y] != f'__O__|') and (list_param[x][y] != f'__O__')
+                    # if our boolean variable is true, then we know the index in question is empty and the move
+                    # can be placed there, if not we will have to find another index
+                    if is_empty:
+                        #place the move onto the grid with the specified character whenever the function was called.
+                        return place_move(row, col, list_param, char)
+                    elif char == "O":
+                        #we need to regenerate the random numbers
+                        # generate a random number for the computers row index value, assign it to a variable named comp_row_val
+                        row = random.randint(0,2)
+                        # generate a random number for the computers column index value, assign it to a variable named comp_col_val
+                        col = random.randint(0,2)
+                    elif char == "X":
+                        # we need to prompt the user for different inputs
+                        #ask for user input for the row index
+                        print('\nThat index is not empty, please input a new row index')
+                        row = is_it_integer()
+
+                        # ask for the user to input our column index
+                        print('\nPlease input a new column index')
+                        col = is_it_integer()
+
 
 # end function part of code
 # ------------------------------------------------------------------------------------------------------
@@ -159,27 +193,24 @@ comp_row_val = random.randint(0,2)
 # generate a random number for the computers column index value, assign it to a variable named comp_col_val
 comp_col_val = random.randint(0,2)
 
-# we need to check if that value has already been placed, if so then we need to get new values for the comp_row_val 
-# and comp_col_val
-# WE CAN TURN THIS INTO ANOTHER FUNCTION SO WE CAN THEN CALL IT FOR WHENEVER THE USER INPUTS ANOTHER MOVE
-for x in range(3):
-    for y in range(3):
-        # we find the index in question
-        if x == comp_row_val and y == comp_col_val:
-            # boolean variable that is true if there aren't any moves in the index [x][y]
-            # will eventually have to put in more lines for if the computer has a move there as well.
-            is_empty = (tic_grid[x][y] != f'__X__|') and (tic_grid[x][y] != f'__X__')
-            # if our boolean variable is true, then we know the index in question is empty and the move
-            # can be placed there, if not we will have to find another index
-            if is_empty:
-                #place the computers move onto the grid with a O
-                print('the slot is empty')
-                tic_grid = place_move(comp_row_val, comp_col_val, tic_grid, 'O')
-            else:
-                #we need to regenerate the random numbers
-                print('That slot is not empty')
-
+# call check move
+tic_grid = check_move(comp_row_val, comp_col_val, tic_grid, "O")
 
 # we then print out the computers move
 print('\nThe computer generated move is:')
+print_grid()
+
+# Ask the user for another input
+print('\nInput another row index')
+row_val = is_it_integer()
+
+# ask for the user to input our column index
+print('\nInput another column index')
+col_val = is_it_integer()
+
+# calls our tic_grid function that returns an updated tic_grid given we feed it the current row_val, col_val, and tic_grid as parameters
+# we then save the return value back to our tic_grid list
+# call check move
+tic_grid = check_move(row_val, col_val, tic_grid, "X")
+
 print_grid()
