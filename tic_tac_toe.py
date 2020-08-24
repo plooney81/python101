@@ -214,3 +214,15 @@ col_val = is_it_integer()
 tic_grid = check_move(row_val, col_val, tic_grid, "X")
 
 print_grid()
+
+# generate a random number for the computers row index value, assign it to a variable named comp_row_val
+comp_row_val = random.randint(0,2)
+
+# generate a random number for the computers column index value, assign it to a variable named comp_col_val
+comp_col_val = random.randint(0,2)
+
+# call check move
+tic_grid = check_move(comp_row_val, comp_col_val, tic_grid, "O")
+
+print('\nThe computer generated move is:')
+print_grid()
