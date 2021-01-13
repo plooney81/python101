@@ -21,6 +21,27 @@ def triangle_number_iteratively():
     while i < numb:
         i += 1
         count += i
-    print(count) #prints the count
+    print(count)
 
-triangle_number_iteratively()
+# triangle_number_iteratively()
+
+# Factor a number Recursively
+def factor_a_number(factor, i=1, list_of_factors=[]):
+    if i == factor:
+        list_of_factors.append(factor) 
+        return list_of_factors
+    if factor % i == 0: list_of_factors.append(i)
+    return factor_a_number(factor, i+1)
+# print('Enter a number you would like to see the factors for? (int)')
+# print(factor_a_number(checks_if_int()))
+
+# Factor a number Recursively2
+def factor_a_number2(factor, i=1):
+    list_of_factors = []
+    if i >= factor/2: return list_of_factors
+    if factor % i == 0: list_of_factors.extend([i, int(factor/i)])
+    list_of_factors.extend(factor_a_number2(factor, i+1))
+    return list_of_factors
+
+print('Enter a number you would like to see the factors for? (int)')
+print(factor_a_number2(checks_if_int()))
