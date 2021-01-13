@@ -21,6 +21,6 @@ def triangle_number_iteratively():
     while i < numb:
         i += 1
         count += i
-    print(count)
+    print(count) #prints the count
 
 triangle_number_iteratively()
