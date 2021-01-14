@@ -78,9 +78,7 @@ def fibonacci_sequence2():
 
 # Recursively
 def fibonacci_sequence3(num):
-    if num <= 1: 
-        return num
-    else:
-        return fibonacci_sequence3(num - 1) + fibonacci_sequence3(num - 2)
+    if num <= 1: return num
+    return fibonacci_sequence3(num - 1) + fibonacci_sequence3(num - 2)
 
 print(fibonacci_sequence3(5))
