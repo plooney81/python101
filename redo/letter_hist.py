@@ -26,7 +26,6 @@
 hist = {'to': 2, 'be': 3, 'or': 1, 'not':4}
 
 def sorting_histogram(dictorionary):
-    new_list = []
     for word in sorted(dictorionary, key=dictorionary.get, reverse=True):
         print(word, dictorionary[word])
 
